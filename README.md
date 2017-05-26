@@ -8,9 +8,15 @@
 3. 低内存占用
 4. 支持获取简码（拼音首字母）
 
-# 使用 
+# 如何使用
 
 只提供足够简洁的API，简单易用。
+
+## 安装
+
+使用 `NuGet` 搜索 `TinyPinyin.Core` 进行安装，也可直接执行命令： `Install-Package TinyPinyin.Core`。
+
+## 使用
 
 ```csharp
 /// <summary>

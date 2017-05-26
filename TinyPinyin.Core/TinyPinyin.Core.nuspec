@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>hstarorg</authors>
+    <owners>hstarorg</owners>
+    <licenseUrl>https://github.com/hstarorg/TinyPinyin.Net/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/hstarorg/TinyPinyin.Net</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <copyright>Copyright 2017</copyright>
+    <tags>TinyPinyin Pinyin</tags>
+  </metadata>
+</package>
