@@ -14,6 +14,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{851091D2-C
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TinyPinyin.ConsoleApp", "TinyPinyin.ConsoleApp\TinyPinyin.ConsoleApp.csproj", "{73881DE0-ED1A-456B-B190-BE2FAA04F728}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +34,10 @@ Global
 		{C84190A7-BBDF-427E-B7BF-6D92B83E83DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C84190A7-BBDF-427E-B7BF-6D92B83E83DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C84190A7-BBDF-427E-B7BF-6D92B83E83DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73881DE0-ED1A-456B-B190-BE2FAA04F728}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73881DE0-ED1A-456B-B190-BE2FAA04F728}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73881DE0-ED1A-456B-B190-BE2FAA04F728}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73881DE0-ED1A-456B-B190-BE2FAA04F728}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
