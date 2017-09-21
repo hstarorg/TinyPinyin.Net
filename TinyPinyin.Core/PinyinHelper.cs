@@ -6,7 +6,7 @@ namespace TinyPinyin.Core
 {
     public static class PinyinHelper
     {
-        private static List<IPinyinDict> mPinyinDicts = null;
+        //private static List<IPinyinDict> mPinyinDicts = null;
 
         /// <summary>
         /// 判断给定字符是否是中文
