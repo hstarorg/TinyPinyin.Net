@@ -1,5 +1,4 @@
 using System.Reflection;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 [assembly: AssemblyTitle("TinyPinyin.Test")]
@@ -13,7 +12,7 @@ using System.Runtime.InteropServices;
 
 [assembly: ComVisible(false)]
 
-[assembly: Guid("ad41a0c8-b499-49fc-9e18-b1b53f75c6c4")]
+[assembly: Guid("813daefb-07f7-4bf5-83b9-ad3cfd5a79e4")]
 
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
