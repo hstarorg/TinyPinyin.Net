@@ -13,7 +13,7 @@ namespace TinyPinyin.ConsoleApp
         {
             var maxims = new string[]
            {
-                 "事常与人违，事总在人为",
+                 "1111事常与人违，事总在人为",
                  "骏马是跑出来的，强兵是打出来的",
                  "驾驭命运的舵是奋斗。不抱有一丝幻想，不放弃一点机会，不停止一日努力。",
                  "如果惧怕前面跌宕的山岩，生命就永远只能是死水一潭",
@@ -21,7 +21,7 @@ namespace TinyPinyin.ConsoleApp
            };
             var expected = new string[]
             {
-                "shi chang yu ren wei ， shi zong zai ren wei",
+                "1111 shi chang yu ren wei ， shi zong zai ren wei",
                 "jun ma shi pao chu lai de ， qiang bing shi da chu lai de",
                 "jia yu ming yun de duo shi fen dou 。 bu bao you yi si huan xiang ， bu fang qi yi dian ji hui ， bu ting zhi yi ri nu li 。",
                 "ru guo ju pa qian mian die dang de shan yan ， sheng ming jiu yong yuan zhi neng shi si shui yi tan",

@@ -31,10 +31,23 @@ namespace TinyPinyin.Core
             if (trie == null || selector == null)
             {
                 // 没有提供字典或选择器，按单字符转换输出
+                var isAlpha = false;
                 var builder1 = new StringBuilder();
                 for (int i = 0; i < inputStr.Length; i++)
                 {
+                    var testAlpha = char.IsDigit(inputStr[i]) || char.IsLower(inputStr[i]) || char.IsUpper(inputStr[i]);
+                    if (!testAlpha && isAlpha)
+                    {
+                        builder1.Append(separator);
+                    }
+
                     builder1.Append(PinyinHelper.GetPinyin(inputStr[i]));
+
+                    if (testAlpha)
+                    {
+                        isAlpha = true;
+                        continue;
+                    }
                     if (i != inputStr.Length - 1)
                     {
                         builder1.Append(separator);
