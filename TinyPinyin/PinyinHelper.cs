@@ -1,13 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using TinyPinyin.Core.Data;
+using TinyPinyin.Data;
 
-namespace TinyPinyin.Core
+namespace TinyPinyin
 {
     public static class PinyinHelper
     {
-        //private static List<IPinyinDict> mPinyinDicts = null;
-
         /// <summary>
         /// 判断给定字符是否是中文
         /// </summary>
@@ -50,7 +48,7 @@ namespace TinyPinyin.Core
         /// <returns></returns>
         public static string GetPinyin(string str, string separator = " ")
         {
-            return Engine.ToPinyin(str, null, null, separator, null);
+            return Engine.ToPinyin(str, null, null, separator);
         }
 
         /// <summary>

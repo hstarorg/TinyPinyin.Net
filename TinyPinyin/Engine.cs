@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace TinyPinyin.Core
+namespace TinyPinyin
 {
     public static class Engine
     {
@@ -20,7 +20,7 @@ namespace TinyPinyin.Core
             }
             throw new ArgumentException("No pinyin dict contains word: " + wordInDict);
         }
-        public static string ToPinyin(string inputStr, string trie, List<IPinyinDict> pinyinDictList, string separator, SegmentationSelector selector)
+        public static string ToPinyin(string inputStr, string trie, List<IPinyinDict> pinyinDictList, string separator)
         {
             if (inputStr == null || inputStr.Length == 0)
             {
@@ -28,7 +28,7 @@ namespace TinyPinyin.Core
             }
 
 
-            if (trie == null || selector == null)
+            if (trie == null)
             {
                 // 没有提供字典或选择器，按单字符转换输出
                 var builder1 = new StringBuilder();

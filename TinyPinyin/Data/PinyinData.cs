@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TinyPinyin.Core.Data
+namespace TinyPinyin.Data
 {
     public static class PinyinData
     {
@@ -18,7 +18,7 @@ namespace TinyPinyin.Core.Data
 
         public static int[] BIT_MASKS = new int[] { 1, 2, 4, 8, 16, 32, 64, 128 };
 
-        public static int PADDING_MASK = 256;
+        public static short PADDING_MASK = 256;
 
         //CHECKSTYLE:OFF
         public static string[] PINYIN_TABLE = new string[]{"", "A", "AI", "AN", "ANG", "AO", "BA", "BAI",

@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace TinyPinyin.Core
+namespace TinyPinyin
 {
-    public abstract class PinyinMapDict : IPinyinDict
+    public abstract class PinyinDict : IPinyinDict
     {
         public abstract Dictionary<string, string[]> Mapping();
 

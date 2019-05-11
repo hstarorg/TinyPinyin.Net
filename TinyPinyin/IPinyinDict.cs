@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace TinyPinyin.Core
+namespace TinyPinyin
 {
     public interface IPinyinDict
     {

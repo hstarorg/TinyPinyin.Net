@@ -1,4 +1,4 @@
-﻿namespace TinyPinyin.Core.Data
+﻿namespace TinyPinyin.Data
 {
     public static class PinyinCode2
     {

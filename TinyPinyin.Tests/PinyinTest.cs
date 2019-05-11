@@ -1,40 +1,55 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TinyPinyin.Core;
+﻿using System.Collections.Generic;
+using Xunit;
 
-namespace TinyPinyin.Test
+namespace TinyPinyin.Tests
 {
-    [TestClass]
     public class PinyinTest
     {
-        [TestMethod]
+
+        public class StringComparer : IEqualityComparer<string>
+        {
+            public bool Equals(string t1, string t2)
+            {
+                return t1.Equals(t2);
+            }
+
+            public int GetHashCode(string t)
+            {
+                return t.GetHashCode();
+            }
+        }
+
+        public readonly StringComparer comparer = new StringComparer();
+
+        [Fact]
         public void TestMethod1()
         {
             var result = PinyinHelper.GetPinyin('中');
-            Assert.AreEqual<string>("ZHONG", result);
+            Assert.Equal("ZHONG", result, this.comparer);
         }
 
-        [TestMethod]
+        [Fact]
         public void TestMethod2()
         {
             var result = PinyinHelper.GetPinyin('的');
-            Assert.AreEqual<string>("DE", result);
+            Assert.Equal<string>("DE", result, this.comparer);
         }
 
-        [TestMethod]
+        [Fact]
         public void TestMethod3()
         {
             var result = PinyinHelper.GetPinyin("我们都有一个家", "|");
-            Assert.AreEqual<string>("WO|MEN|DOU|YOU|YI|GE|JIA", result);
+            Assert.Equal<string>("WO|MEN|DOU|YOU|YI|GE|JIA", result, this.comparer);
         }
 
-        [TestMethod]
+        [Fact]
         public void TestMethod4()
         {
             var result = PinyinHelper.GetPinyinInitials("成都");
-            Assert.AreEqual<string>("CD", result);
+            Assert.Equal<string>("CD", result, this.comparer);
         }
 
-        [TestMethod]
+        [Fact]
         public void TestMethod5()
         {
             var maxims = new string[]
@@ -56,11 +71,11 @@ namespace TinyPinyin.Test
             for (var i = 0; i < maxims.Length; i++)
             {
                 var result = PinyinHelper.GetPinyin(maxims[i]);
-                Assert.AreEqual<string>(expected[i].ToUpper(), result);
+                Assert.Equal<string>(expected[i].ToUpper(), result, this.comparer);
             }
         }
 
-        [TestMethod]
+        [Fact]
         public void TestMethod6()
         {
             string[] medicines = new string[]
@@ -108,7 +123,7 @@ namespace TinyPinyin.Test
             for (var i = 0; i < medicines.Length; i++)
             {
                 var result = PinyinHelper.GetPinyinInitials(medicines[i]);
-                Assert.AreEqual<string>(expected[i].ToUpper(), result);
+                Assert.Equal<string>(expected[i].ToUpper(), result, this.comparer);
             }
         }
     }
