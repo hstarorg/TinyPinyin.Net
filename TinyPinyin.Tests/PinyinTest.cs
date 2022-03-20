@@ -71,7 +71,7 @@ namespace TinyPinyin.Tests
             for (var i = 0; i < maxims.Length; i++)
             {
                 var result = PinyinHelper.GetPinyin(maxims[i]);
-                Assert.Equal<string>(expected[i].ToUpper(), result, this.comparer);
+                Assert.Equal(expected[i].ToUpper(), result, this.comparer);
             }
         }
 
