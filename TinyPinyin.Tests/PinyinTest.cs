@@ -22,35 +22,42 @@ namespace TinyPinyin.Tests
         public readonly StringComparer comparer = new StringComparer();
 
         [Fact]
-        public void TestMethod1()
+        public void Test_GetPinyin_Normal()
         {
             var result = PinyinHelper.GetPinyin('中');
             Assert.Equal("ZHONG", result, this.comparer);
         }
 
         [Fact]
-        public void TestMethod2()
+        public void Test_GetPinyin_Normal_02()
         {
             var result = PinyinHelper.GetPinyin('的');
             Assert.Equal<string>("DE", result, this.comparer);
         }
 
         [Fact]
-        public void TestMethod3()
+        public void Test_GetPinyin_With_Separator()
         {
             var result = PinyinHelper.GetPinyin("我们都有一个家", "|");
             Assert.Equal<string>("WO|MEN|DOU|YOU|YI|GE|JIA", result, this.comparer);
         }
 
         [Fact]
-        public void TestMethod4()
+        public void Test_GetPinyinInitials_Normal()
         {
             var result = PinyinHelper.GetPinyinInitials("成都");
             Assert.Equal<string>("CD", result, this.comparer);
         }
 
         [Fact]
-        public void TestMethod5()
+        public void Test_GetPinyinInitials_With_Separator()
+        {
+            var result = PinyinHelper.GetPinyinInitials("成都", " ");
+            Assert.Equal<string>("C D", result, this.comparer);
+        }
+
+        [Fact]
+        public void Test_GtePinyin_LongText()
         {
             var maxims = new string[]
             {
@@ -76,7 +83,7 @@ namespace TinyPinyin.Tests
         }
 
         [Fact]
-        public void TestMethod6()
+        public void Test_GetPinyinInitials_HardText()
         {
             string[] medicines = new string[]
             {

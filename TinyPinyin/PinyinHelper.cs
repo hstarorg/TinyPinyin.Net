@@ -56,11 +56,11 @@ namespace TinyPinyin
         /// </summary>
         /// <param name="str"></param>
         /// <returns></returns>
-        public static string GetPinyinInitials(string str)
+        public static string GetPinyinInitials(string str, string separator = "")
         {
             var result = GetPinyin(str, "|");
             // 修复：获取首字母时字符串中含有|字符会报超出索引范围，https://github.com/hstarorg/TinyPinyin.Net/issues/5
-            return string.Join("", result.Split('|').Select(x => !string.IsNullOrWhiteSpace(x) && x.Length > 0 ? x.Substring(0, 1) : x).ToArray());
+            return string.Join(separator, result.Split('|').Select(x => !string.IsNullOrWhiteSpace(x) && x.Length > 0 ? x.Substring(0, 1) : x).ToArray());
         }
 
         private static int GetPinyinCode(char c)
