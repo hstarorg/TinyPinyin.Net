@@ -12,7 +12,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TinyPinyin", "TinyPinyin\Ti
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TinyPinyin.Tests", "TinyPinyin.Tests\TinyPinyin.Tests.csproj", "{C68347E7-26BD-40F0-A07E-F5A292EB909A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TinyPinyin.DataProcessor", "TinyPinyin.DataProcessor\TinyPinyin.DataProcessor.csproj", "{3DCBC176-E50B-4799-86D5-0924FCF6BB39}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TinyPinyin.DataProcessor", "TinyPinyin.DataProcessor\TinyPinyin.DataProcessor.csproj", "{3DCBC176-E50B-4799-86D5-0924FCF6BB39}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TinyPinyin.Demo", "TinyPinyin.Demo\TinyPinyin.Demo.csproj", "{798846E8-EFE1-44D8-A9D0-744269A36823}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,6 +34,10 @@ Global
 		{3DCBC176-E50B-4799-86D5-0924FCF6BB39}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3DCBC176-E50B-4799-86D5-0924FCF6BB39}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3DCBC176-E50B-4799-86D5-0924FCF6BB39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{798846E8-EFE1-44D8-A9D0-744269A36823}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{798846E8-EFE1-44D8-A9D0-744269A36823}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{798846E8-EFE1-44D8-A9D0-744269A36823}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{798846E8-EFE1-44D8-A9D0-744269A36823}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
