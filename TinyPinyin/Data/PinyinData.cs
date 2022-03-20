@@ -4,12 +4,20 @@ namespace TinyPinyin.Data
 {
     public static class PinyinData
     {
+        /// <summary>
+        /// 汉字 Unicode 编码最小值
+        /// </summary>
         public static char MIN_VALUE = (char)19968;
 
+        /// <summary>
+        /// 汉字 Unicode 编码最小值
+        /// </summary>
         public static char MAX_VALUE = (char)40869;
 
+        /// <summary>
+        /// 特殊的汉字“〇”，编码为 12295
+        /// </summary>
         public static String PINYIN_12295 = "LING";
-
         public static char CHAR_12295 = (char)12295;
 
         public static int PINYIN_CODE_1_OFFSET = 7000;

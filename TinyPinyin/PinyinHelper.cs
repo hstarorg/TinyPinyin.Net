@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using TinyPinyin.Data;
+﻿using System.Linq;
 
 namespace TinyPinyin
 {
@@ -13,7 +11,7 @@ namespace TinyPinyin
         /// <returns></returns>
         public static bool IsChinese(char c)
         {
-            return (PinyinData.MIN_VALUE <= c && c <= PinyinData.MAX_VALUE && GetPinyinCode(c) > 0) || PinyinData.CHAR_12295 == c;
+            return Engine.IsChinese(c);
         }
 
         /// <summary>
@@ -23,21 +21,7 @@ namespace TinyPinyin
         /// <returns></returns>
         public static string GetPinyin(char c)
         {
-            if (IsChinese(c))
-            {
-                if (c == PinyinData.CHAR_12295)
-                {
-                    return PinyinData.PINYIN_12295;
-                }
-                else
-                {
-                    return PinyinData.PINYIN_TABLE[GetPinyinCode(c)];
-                }
-            }
-            else
-            {
-                return c.ToString();
-            }
+            return Engine.GetPinyinByChar(c);
         }
 
         /// <summary>
@@ -62,41 +46,6 @@ namespace TinyPinyin
             var result = GetPinyin(str, "|");
             // 修复：获取首字母时字符串中含有|字符会报超出索引范围，https://github.com/hstarorg/TinyPinyin.Net/issues/5
             return string.Join(separator, result.Split('|').Select(x => !string.IsNullOrWhiteSpace(x) && x.Length > 0 ? x.Substring(0, 1) : x).ToArray());
-        }
-
-        private static int GetPinyinCode(char c)
-        {
-            int offset = c - PinyinData.MIN_VALUE;
-            if (0 <= offset && offset < PinyinData.PINYIN_CODE_1_OFFSET)
-            {
-                return decodeIndex(PinyinCode1.PINYIN_CODE_PADDING, PinyinCode1.PINYIN_CODE, offset);
-            }
-            else if (PinyinData.PINYIN_CODE_1_OFFSET <= offset
-                  && offset < PinyinData.PINYIN_CODE_2_OFFSET)
-            {
-                return decodeIndex(PinyinCode2.PINYIN_CODE_PADDING, PinyinCode2.PINYIN_CODE,
-                        offset - PinyinData.PINYIN_CODE_1_OFFSET);
-            }
-            else
-            {
-                return decodeIndex(PinyinCode3.PINYIN_CODE_PADDING, PinyinCode3.PINYIN_CODE,
-                        offset - PinyinData.PINYIN_CODE_2_OFFSET);
-            }
-        }
-
-        private static short decodeIndex(byte[] paddings, byte[] indexes, int offset)
-        {
-            //CHECKSTYLE:OFF
-            int index1 = offset / 8;
-            int index2 = offset % 8;
-            short realIndex;
-            realIndex = (short)(indexes[offset] & 0xff);
-            //CHECKSTYLE:ON
-            if ((paddings[index1] & PinyinData.BIT_MASKS[index2]) != 0)
-            {
-                realIndex = (short)(realIndex | PinyinData.PADDING_MASK);
-            }
-            return realIndex;
         }
     }
 }
