@@ -35,6 +35,14 @@ string PinyinHelper.GetPinyin(char c)
 string PinyinHelper.GetPinyin(string text, string separator = " ")
 
 /// <summary>
+/// 获取拼音首字母
+/// </summary>
+/// <param name="str"></param>
+/// <param name="separator">拼音分割符，默认空字符串（不分割）</param>
+/// <returns></returns>
+string GetPinyinInitials(string str, string separator = "")
+
+/// <summary>
 /// 判断单个字符是否是中文
 /// </summary>
 /// <param name="c"></param>

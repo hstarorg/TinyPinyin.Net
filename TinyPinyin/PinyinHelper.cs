@@ -52,9 +52,10 @@ namespace TinyPinyin
         }
 
         /// <summary>
-        /// 获取拼音手字母
+        /// 获取拼音首字母
         /// </summary>
         /// <param name="str"></param>
+        /// <param name="separator">拼音分割符，默认空字符串（不分割）</param>
         /// <returns></returns>
         public static string GetPinyinInitials(string str, string separator = "")
         {
