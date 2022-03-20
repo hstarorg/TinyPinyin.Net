@@ -1,7 +1,4 @@
-﻿using System;
-using System.IO;
-using System.Linq;
-using TinyPinyin.DataProcessor.OriginalData;
+﻿using TinyPinyin.DataProcessor.OriginalData;
 
 namespace TinyPinyin.DataProcessor
 {
@@ -15,6 +12,8 @@ namespace TinyPinyin.DataProcessor
             WriteFile(ConvertToBytesArray(PinyinCode2.PINYIN_CODE), "2_code.txt");
             WriteFile(ConvertToBytesArray(PinyinCode3.PINYIN_CODE_PADDING), "3_padding.txt");
             WriteFile(ConvertToBytesArray(PinyinCode3.PINYIN_CODE), "3_code.txt");
+            Console.WriteLine("请按任意键退出");
+            Console.ReadKey();
         }
 
         static void WriteFile(byte[] bytes, string filepath)
