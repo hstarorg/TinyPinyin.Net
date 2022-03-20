@@ -59,7 +59,8 @@ namespace TinyPinyin
         public static string GetPinyinInitials(string str)
         {
             var result = GetPinyin(str, "|");
-            return string.Join("", result.Split('|').Select(x => x.Substring(0, 1)).ToArray());
+            // 修复：获取首字母时字符串中含有|字符会报超出索引范围，https://github.com/hstarorg/TinyPinyin.Net/issues/5
+            return string.Join("", result.Split('|').Select(x => !string.IsNullOrWhiteSpace(x) && x.Length > 0 ? x.Substring(0, 1) : x).ToArray());
         }
 
         private static int GetPinyinCode(char c)
