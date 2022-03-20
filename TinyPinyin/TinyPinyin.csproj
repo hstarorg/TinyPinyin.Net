@@ -8,6 +8,11 @@
     <RepositoryType>git</RepositoryType>
     <PackageProjectUrl>https://github.com/hstarorg/TinyPinyin.Net</PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Authors>hstarorg</Authors>
+    <AssemblyVersion>1.0.0.1</AssemblyVersion>
+    <FileVersion>1.0.0.1</FileVersion>
+    <Description>适用于.Net平台的快速、低内存占用的汉字转拼音库。兼容 .Net Standard/.Net4.8/.Net 5/.Net 6</Description>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
