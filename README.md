@@ -14,7 +14,7 @@
 
 ## 安装
 
-使用 `NuGet` 搜索 `TinyPinyin.Core` 进行安装，也可直接执行命令： `Install-Package TinyPinyin.Core`。
+使用 `NuGet` 搜索 `TinyPinyin.Core` 进行安装，也可直接执行命令： `Install-Package TinyPinyin`。
 
 ## 使用
 
